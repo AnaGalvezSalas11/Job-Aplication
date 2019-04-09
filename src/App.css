@@ -1,0 +1,9 @@
+  
+  .contenedor{
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: auto;
+    column-count: 5;
+    -webkit-column-break-inside: avoid;
+    margin-left: 80px;
+
+  } 

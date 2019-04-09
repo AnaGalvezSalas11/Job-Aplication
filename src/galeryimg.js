@@ -6,13 +6,11 @@ function ImageApi(props){
     
 
     return(
-        <div className="contenedor">
         <div className="elemento">
-            <img className="img" src={props.imageURL} alt="imagen"></img>
-            <p>{props.descriptionImg}</p>
-            
+            <img className="img" onClick={()=> props.hacerclick(props.imageURL)} src={props.imageURL} alt="imagen"></img>
+            {/* <p>{props.descriptionImg}</p> */}
         </div>
-      </div>
+    
     )
 }
 
