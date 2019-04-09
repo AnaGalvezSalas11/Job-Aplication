@@ -1,0 +1,29 @@
+
+  
+  .contenedr{
+    width: 90%;
+    margin: 1rem auto;
+    max-width:960px;
+    column-count: 3;
+    display: flex;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: auto;
+    
+   
+  }
+  
+  .elemento{
+    width: 220px;
+    background: #fff;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    
+    /* break-inside: avoid; */
+    /* page-break-inside: avoid; */
+  }
+  
+  .img{
+    border-radius: 10px;
+  }

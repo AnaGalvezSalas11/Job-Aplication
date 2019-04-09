@@ -1,27 +1,43 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ImageApi from './galeryimg.js'
+import './galeryimg.css'
+
+
+
+
+
+
+    
+
 
 class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      img1:[],
+    }
+  }
+
+  componentDidMount(){
+    fetch('https://api.unsplash.com/search/photos?query=random&client_id=e4c19c3fe4d16da39cb7b49acaaeef72a5c5a4cc9d1ec18e16cba3b0a8554f3e')
+    .then(data=>data.json())
+    .then(json =>{
+      this.setState({
+        img1: json.results,
+      })
+    })
+    
+  }
+
   render() {
+
+    const verimagen = this.state.img1
+    const verimagenfinal = verimagen.map(i=><ImageApi imageURL={i.urls.thumb} descriptionImg={i.alt_description} alt="imagen"/>)
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+      verimagenfinal
+    )
   }
 }
 
