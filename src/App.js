@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import ImageApi from './galeryimg.js'
-import './galeryimg.css'
 import Modal from './modal.js'
+import NavPinterest from './nav.js'
 
 
 class App extends Component {
@@ -50,12 +50,14 @@ this.cerrarmodal=this.cerrarmodal.bind(this)
     const verimagenfinal = verimagen.map(i=><ImageApi hacerclick={this.abrirmodal} imageURL={i.urls.thumb} descriptionImg={i.alt_description} alt="imagen"/>)
 
     return (
+      <div className="containerNav"><NavPinterest/>
       <div className= "contenedor" > 
         {this.state.modal && <Modal cerrarmodal={this.cerrarmodal} verimagenpuntual={this.state.modal}/>} 
         {verimagenfinal}
         {verimagenfinal}
         {verimagenfinal}
         {verimagenfinal}
+      </div>
       </div>
 
     )

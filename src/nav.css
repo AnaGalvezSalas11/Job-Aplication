@@ -1,0 +1,72 @@
+.btnnav{
+width: 100%;
+display: flex;
+justify-content: space-around;
+padding: 0;
+}
+
+.elementNav{
+   
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.logopinterest{
+color: rgb(218, 8, 8);
+}
+
+.search{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #EEECEC;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    height: 100%;
+    line-height: 20px;
+    outline: none;
+    padding: 12px;
+    width: 60%;
+    /* background: url("logo.svg") no-repeat scroll 0 0 transparent; */
+}
+
+.iconNav{
+    font-family: Arial;
+    text-decoration: none;
+    padding: 0;
+    font-weight: normal;
+    margin: 0;
+    text-decoration-color: none;
+    color: rgb(150, 146, 146);
+    font-weight: bold;
+    top: 8px;
+    position: relative;
+}
+
+.iconNavInicio{
+    color: black;
+    font-family: Arial;
+    text-decoration: none;
+    padding: 0;
+    font-weight: normal;
+    margin: 0;
+    text-decoration-color: none;
+    font-weight: bold;
+    top: 8px;
+    position: relative;
+}
+
+.points{
+    font-weight: bolder;
+    font-size: 30px;
+    top: -9px;
+}
+.logoChat, .logoAlert{
+    color: rgb(150, 146, 146);
+}
+
