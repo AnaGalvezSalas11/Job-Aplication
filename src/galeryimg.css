@@ -1,7 +1,7 @@
 
 
   
-  .elemento{
+  .element{
     width: 220px;
     background: #fff;
     margin-right: 15px;
@@ -14,5 +14,5 @@
   
   .img{
     border-radius: 10px;
-    /* position: relative; */
+    position: relative;
   }

@@ -3,13 +3,33 @@ import './modal.css'
 
 function Modal(props){
 return(
-    <div className = "contenedorModal" onClick={(e)=> {
-        if (e.target.getAttribute("class")==="contenedorModal"){
-            props.cerrarmodal()
+    
+    <div className = "containerModal" onClick={(e)=> {
+        if (e.target.getAttribute("class")==="containerModal"){
+            props.closemodal()
         }
     } } >
-        <div className = "titanic" >
-        <img className="img"  src={props.verimagenpuntual} alt="imagen"></img>
+        <div className= "divBig">
+            <div className="headModal" >
+                <p className="pointsModal">...</p>
+                <button className="btnHead submit">Enviar</button>
+                <button className="btnHead save" >Guardar</button>
+
+            </div>
+            <div className = "imgModalWhatch" >
+                <div className="divImage">
+                <img className="imgModal"  src={props.imgModal} alt="imagen"></img>
+                </div>
+            <div className="divContent">
+                <div className="divTextContent">
+                    <p className="textModal">Fotos y Comentarios</p>
+                </div>
+                <div className="divBtnContent">
+                    <button className="btnContent">1 foto</button>
+                    <button className="btnContent" >Sin Comentarios</button>
+                </div>
+            </div>
+            </div>
         </div>
     </div>
 
