@@ -11,7 +11,9 @@ class App extends Component {
       photos:[],
       modal: false,
       start: false,
-      finish: false
+      finish: false,
+      title: null,
+      description: null,
 
     }
 this.openmodal=this.openmodal.bind(this)
@@ -62,9 +64,12 @@ this.closemodal=this.closemodal.bind(this)
 
   
   openmodal(i){
+    // console.log(i)
     this.setState({
       ...this.state,
-      modal:i
+      modal:i.imageURL,
+      title: i.titlephoto,
+      description: i.descriptionImg
     })
   }
 
@@ -81,15 +86,15 @@ this.closemodal=this.closemodal.bind(this)
    
 
     const watchimg = this.state.photos
-    const seeFinalImage = watchimg.map(i=><ImageApi click={this.openmodal} imageURL={i.urls.thumb} descriptionImg={i.alt_description} alt="imagen" />)
+    const seeFinalImage = watchimg.map(i=><ImageApi click={this.openmodal} imageURL={i.urls.thumb} titlephoto={i.description} descriptionImg={i.alt_description} alt="imagen" />)
 
     return (
       
       <div className="containerNav"><NavPinterest/>
       
       <div className= "containerImage" > 
-        {this.state.modal && <Modal closemodal={this.closemodal} imgModal={this.state.modal}/>} 
-        {seeFinalImage}
+        {this.state.modal && <Modal closemodal={this.closemodal} imgModal={this.state.modal} newtitle={this.state.title} newdescription={this.state.description}/>} 
+        {seeFinalImage} 
       
       </div>
       </div>
