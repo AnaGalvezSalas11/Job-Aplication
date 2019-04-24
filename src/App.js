@@ -48,7 +48,7 @@ this.closemodal=this.closemodal.bind(this)
           ...this.state,
           finish:true,
         })
-        fetch('https://api.unsplash.com/search/photos?page=3&per_page=20&query=job&client_id=e4c19c3fe4d16da39cb7b49acaaeef72a5c5a4cc9d1ec18e16cba3b0a8554f3e')
+        fetch('https://api.unsplash.com/search/photos?page=2&per_page=30&query=job&client_id=e4c19c3fe4d16da39cb7b49acaaeef72a5c5a4cc9d1ec18e16cba3b0a8554f3e')
         .then(data=>data.json())
         .then(json =>{
           this.setState({
@@ -59,12 +59,38 @@ this.closemodal=this.closemodal.bind(this)
           })
         })
       }
-    }}
+
+        if (document.documentElement.scrollTop + window.innerHeight >  document.documentElement.offsetHeight * 0.8){
+          this.setState({
+            ...this.state,
+            start:true,
+          })
+        }
+         if(this.state.finish !== this.state.start){
+          this.setState({
+            ...this.state,
+            finish:true,
+          })
+          fetch('https://api.unsplash.com/search/photos?page=3&per_page=30&query=job&client_id=e4c19c3fe4d16da39cb7b49acaaeef72a5c5a4cc9d1ec18e16cba3b0a8554f3e')
+          .then(data=>data.json())
+          .then(json =>{
+            this.setState({
+              ...this.state,
+              photos: this.state.photos.concat(json.results),
+              finish:true,
+              start:true,
+            })
+          })
+
+    }
+  
+  }
+}
   
 
   
   openmodal(i){
-    // console.log(i)
+    console.log(i)
     this.setState({
       ...this.state,
       modal:i.imageURL,
@@ -93,6 +119,7 @@ this.closemodal=this.closemodal.bind(this)
       <div className="containerNav"><NavPinterest/>
       
       <div className= "containerImage" > 
+
         {this.state.modal && <Modal closemodal={this.closemodal} imgModal={this.state.modal} newtitle={this.state.title} newdescription={this.state.description}/>} 
         {seeFinalImage} 
       

@@ -6,8 +6,7 @@ return(
     
     <div className = "containerModal" onClick={(e)=> {
         if (e.target.getAttribute("class")==="containerModal"){
-            props.closemodal()
-        }
+            props.closemodal()}
     } } >
         <div className= "divBig">
             <div className="headModal" >

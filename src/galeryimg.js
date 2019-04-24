@@ -3,12 +3,12 @@ import './galeryimg.css';
 
 
 function ImageApi(props){
+    // console.log(ImageApi)
     
 
     return(
         <div className="element">
             <img className="img"  onClick={()=> props.click(props)} src={props.imageURL} alt="imagen"></img>
-            {/* <p>{props.descriptionImg}</p> */}
         </div>
     
     )
