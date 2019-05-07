@@ -23,12 +23,9 @@ return(
                 <div className="divTextContent">
                     <p className="textModal titlemodal" >{props.newtitle}</p>
                     <p className="textModal descriptionmodal">{props.newdescription}</p>
-                    <p className="textModal">Fotos y Comentarios</p>
+                    <p className="textModal option">Fotos y Comentarios</p>
                 </div>
-                <div className="divBtnContent">
-                    <button className="btnContent">1 foto</button>
-                    <button className="btnContent" >Sin Comentarios</button>
-                </div>
+                
             </div>
             </div>
         </div>

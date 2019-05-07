@@ -105,6 +105,7 @@
     left: 5%;
     position: relative;
     font-weight: bolder;
+    bottom: 10%
 }
 
 .divBtnContent{
@@ -127,4 +128,15 @@
 
 .btnContent{
     margin-right: 15px;
+}
+
+.option{
+    top: 10%;
+}
+
+.descriptionmodal{
+    width: 70%
+}
+.titlemodal{
+    width: 70%
 }
